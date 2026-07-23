@@ -6,7 +6,9 @@ export default defineConfig({
 
     /*devToolbar herramientas de la barra */
     devToolbar: { 
+        // cerramos el menu
         enabled: false,
+
     
     }
 });
