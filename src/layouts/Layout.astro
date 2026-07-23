@@ -1,23 +1,65 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
+
+		// icono de la pestaña de navegacíon
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+
+		// título de la pestaña de navegación
+		<title>Startup Go Global | Soluciones digitales para empresas</title>
 	</head>
 	<body>
-		<slot />
+		// creamos una cabecera de página web donde ponemos un menú y un cuerpo
+		<header>
+			<nav>
+				/* creamos una estructura rápida de una lista desordenada con
+				dos listas a href ul>li*2>a */
+
+				<ul>
+					/* utilizamos "/"" como la ruta de inicio */
+					<li><a href="/">Inicio </a></li>
+					<li><a href="/about">Acerca de </a></li>
+				</ul>
+			</nav>
+
+			<main>
+				/* esto es para hacer una reserva de un contenido para un
+				componente */
+				<slot />
+			</main>
+		</header>
 	</body>
 </html>
 
+/* vamos a crear nuevos estilos dentro del layout
 <style>
-	html,
+	html {
+		background-color: black;
+		color: #fff;
+	}
+
 	body {
 		margin: 0;
-		width: 100%;
-		height: 100%;
+		padding: 0;
+
+		box-sizing: border-box;
 	}
+
+	main {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 1rem;
+	}
+
+	nav > ul{
+		list-style: none;
+		display: flex;
+	}
+
+
 </style>
